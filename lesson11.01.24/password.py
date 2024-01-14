@@ -6,3 +6,5 @@ def ask_password():
         print('Ви питаетес нас зоскамить')
 
 ask_password()
+
+

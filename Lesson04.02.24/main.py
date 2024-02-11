@@ -14,7 +14,7 @@ lamba = Car('чёрная', 'навероное Ламба', '999999999999999999
 
 lamba.sound()
 lamba.long_sound()
-    
+
 print(lamba.color)
 print(lamba.mark)
 print(lamba.max_speed)

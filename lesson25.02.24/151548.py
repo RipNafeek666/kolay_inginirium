@@ -17,7 +17,7 @@ while 1:
             pygame.quit()
             exit()
 
-    
+
 
 
     #pygame.draw.circle(win, random.choices(range(256), k = 3), (W / 2, H / 2), 30)

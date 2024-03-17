@@ -6,8 +6,8 @@ red = (255, 0,0)
 yellow = (255, 255, 0)
 lightgreen = (0, 200, 200)
 
-cross = "#046582"
-circle = "#e4bad4"
+cross = "#FF00FF"
+circle = "#CCE5FF"
 pg.init()
 W,H = 600,600
 screen = pg.display.set_mode((W,H))
@@ -41,17 +41,24 @@ class Board:
                     draw_circle(screen, x, y, self.size)
 
     def check_end(self):
-        is_end_info = is_end(self.board)+
-        sheft = self.W // 10
+        is_end_info = is_end(self.board)
+        shift = self.W // 10
         if is_end_info is not None:
             type_end = is_end_info[0]
             number = is_end_info[1]
             if type_end == 'col':
                 x0, y0 = (number + .5) * self.size, shift
-                x1,y1 = (number + .5) * self.size, self.size * 3 - shite
+                x1,y1 = (number + .5) * self.size, self.size * 3 - shift
             elif type_end == 'line':
-                x0, y0 = shift, (number + .5)
-            elif type_end == 'diag': ...
+                x0, y0 = shift, (number + .5) * self.size
+                x1,y1 = 3 * self.size - shift, (number + .5) * self.size
+            elif type_end == 'diag':
+                if number  == 1:
+                    x0, y0 = shift, shift
+                    x1,y1 = 3 * self.size - shift, 3 * self.size - shift
+                else:
+                    x0, y0 = 3 * self.size - shift, shift
+                    x1,y1 = shift, 3 * self.size - shift
             pg.draw.line(screen, red, (x0, y0), (x1, y1) , 10)
             pg.display.update()
             pg.time.delay(3000)
@@ -64,12 +71,11 @@ def is_end(board):
             return 'col' , i
         if check_i_line(board, i):
             return 'line', i
-if check_main_diag(board):
-    ...
-    return 'diag', 1
-if check_secondary_diag(board):
-    return 'diag', 2
-return None
+    if check_main_diag(board):
+        return 'diag', 1
+    if check_secondary_diag(board):
+        return 'diag', 2
+    return None
 
 def check_i_line(x,i):
     if x[i][0] == x[i][2] != 0:
@@ -82,13 +88,13 @@ def check_i_col(x,i):
     else:
         return False
 
-def check_main_diag(x, i):
+def check_main_diag(x):
     if x[0][0] == x[1][1] == x[2][2] != 0:
         return True
     else:
         return False
 
-def check_secondary_diag(x, i):
+def check_secondary_diag(x):
     if x[0][2] == x[1][1] == x[2][0] != 0:
         return True
     else:
@@ -118,8 +124,6 @@ while True:
 
     keys = pg.key.get_pressed()
     if keys[pg.K_ESCAPE] or board.check_end():
-
-    if keys[pg.K_ESCAPE]:
         pg.quit()
         exit()
 

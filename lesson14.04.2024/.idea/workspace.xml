@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e7193a3c-9b8e-45d7-9fbe-1ff70bae9f22" name="Changes" comment="" />
+    <list default="true" id="154dba9c-85b7-46a4-9c06-b2715a0164e6" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,20 +13,15 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2em1ExtZ1JiAymf8lSFnDmI5IeG" />
+  <component name="ProjectId" id="2f5nwMMshkSm356TFiHB79T2AlA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/nout_student1/Documents/Азазров Александр/py2.0(Февраль-Март)"
-  }
-}]]></component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="blackLESSON" />
+      <module name="lesson14.04.2024" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -50,11 +45,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="e7193a3c-9b8e-45d7-9fbe-1ff70bae9f22" name="Changes" comment="" />
-      <created>1712494831303</created>
+      <changelist id="154dba9c-85b7-46a4-9c06-b2715a0164e6" name="Changes" comment="" />
+      <created>1713100043616</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1712494831303</updated>
+      <updated>1713100043616</updated>
     </task>
     <servers />
   </component>
